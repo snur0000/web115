@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="css/c02.css">
+  
+    <title>Chapter 2: Basic JavaScript Instructions - Numeric Variable</title>
+  </head>
+  <body>
+    <div id="content">
+      <br>
+	  <h1>Sabby's Custom Printing</h1>
+	  <h2> you think it, we print it</h2>
+      <div id="cost"> $5 per sticker</div> <br>
+	  <div id= "total"> </div>
+</div>
+    <script> 
+	// Create three variables to store the information needed.
+var price;
+var quantity;
+var total;
+
+// Assign values to the price and quantity variables.
+price = 5;
+quantity = 14;
+// Calculate the total by multiplying the price by quantity.
+total = price * quantity;
+
+// Get the element with an id of cost.
+var el = document.getElementById('cost');
+document.getElementById("total").innerHTML = '14 stickers =' + '$' + total;
+
+/* 
+NOTE: textContent does not work in IE8 or earlier
+You can use innerHTML, but note the security issues on p228-231
+el.innerHTML = '$' + total;
+*/</script>
+<footer>
+<a href="http://validator.w3.org/check?uri=referer"> <img src ="../images/valid_html5/valid_html5.gif" alt = "html5"></a> 
+<a href="http://jigsaw.w3.org/css-validator/check/referer"> <img src ="../images/valid_html5/vcss-blue.gif" alt= "css"></a>
+</footer>
+  </body>
+</html>

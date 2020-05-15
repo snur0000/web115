@@ -1,0 +1,70 @@
+  /* CSS for adding content example */
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:800italic);
+@import url(https://fonts.googleapis.com/css?family=Shadows+Into+Light);
+body { 
+    font-family: "Open Sans", Courier, monospace;
+	color: #ff4d01;
+    background-image: url("../../images/background-image.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin: 0;
+    padding: 0;}
+
+h1, h3, p {
+    float: left;
+    clear: left;
+    width: 320px;
+    background-color: #fff;
+    
+    text-align: center;}
+
+
+h1 {
+	font-family: "Shadows Into Light", Courier, monospace;
+	color:lime;
+    margin: 50px 0 0 50px;
+    height: 140px;
+    background-color:#2a2a2a;
+     background-image: url("../../images/sabbycustomink_logo.png");
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+    border-top: 1px solid #bcbdc0;
+    border-left: 1px solid #bcbdc0;
+    border-right: 1px solid #bcbdc0;}
+
+h3 {
+    margin: 0 0 0 50px;
+    padding: 25px 0 0 0;
+    font-family: 'Shadows Into Light', arial, sans-serif;
+    font-size: 1.8em;
+    font-style: italic;
+    font-weight: 800;
+    line-height: 0.80em;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    border-left: 1px solid #bcbdc0;
+    border-right: 1px solid #bcbdc0;}
+
+p {
+    margin: 0 0 0 50px;
+    padding: 30px 0 25px 0;
+    font-weight: bold;
+    text-align: center;
+    border-right: 1px solid #bcbdc0;
+    border-bottom: 1px solid #bcbdc0;
+    border-left: 1px solid #bcbdc0;}
+
+/* Border under box when you move script in the last example */
+p + script + h3 {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #bcbdc0;}
+
+/* Fix for full-screen background image: Chrome on Android */
+html{
+    height:100%;
+    min-height:100%;}
+body{
+    min-height:100%;}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+  <meta charset="UTF-8">
+    <title>JavaScript &amp; jQuery - Chapter 5: Document Object Model - Get Element By ID</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/c05.css">
+  </head>
+  <body>
+    <div id="page">
+      <h1 id="header">Sabby custom Ink</h1>
+	  <h2>&diams;you think it, we print it&diams;</h2> <hr>
+      <h2>&hearts;Stickers Mediums&hearts;</h2>
+      <ul>
+        <li id="one" class="hot">vinyl <em> - the good stuff ;)</em></li>
+        <li id="two" class="hot">thermal</li>
+        <li id="three" class="hot">paper</li>
+        <li id="four">holographic</li>
+      </ul>
+    </div>
+    <script>
+	// Select the element and store it in a variable.
+var el = document.getElementById('one');
+
+// Change the value of the class attribute.
+el.className = 'cool';
+</script>
+
+<footer>
+<a href="http://validator.w3.org/check?uri=referer"> <img src ="../images/valid_html5/valid_html5.gif" alt = "html5"></a> 
+<a href="http://jigsaw.w3.org/css-validator/check/referer"> <img src ="../images/valid_html5/vcss-blue.gif" alt= "css"></a>
+</footer>
+
+  </body>
+</html>

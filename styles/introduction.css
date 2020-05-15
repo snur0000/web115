@@ -1,0 +1,15 @@
+body{
+	margin: 50px;
+	background-color:#f1d3b7;
+	color:#933d34;
+	font-family:Arial;
+	}
+	
+h1,footer{
+	text-align:center;
+	}
+#selfie{
+	text-align:center;
+	color:#f62839;
+	font-weight:bold;
+	}

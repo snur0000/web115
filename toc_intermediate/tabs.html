@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+  	<meta charset="UTF-8">
+    <title>JavaScript &amp; jQuery - Chapter 11: Content Panels -  Tabs</title>
+    <link rel="stylesheet" href="css/tabs.css" />
+  </head>
+
+  <body>
+
+  
+	<div class = "wholepage">
+	<h1>Sabby's Custom Ink</h1>	 
+		 <h2>&diams; you think it, we print it &diams;</h2>
+
+    <section class="page">
+
+      <div class="tabs">
+
+        <ul class="tab-list">
+          <li class="active"><a class="tab-control" href="#tab-1"><h3>About Us</h3></a></li>
+          <li><a class="tab-control" href="#tab-2"><h3>Works</h3></a></li>
+          <li><a class="tab-control" href="#tab-3"><h3>Contact us</h3></a></li>
+        </ul>
+
+        <div class="tab-panel active" id="tab-1">
+           <p>Sabby's Custom Ink specializes in creating hand-made prints for every occasion! Our company encourages creativity, self-expression and strongly believes art should be accessible and affordable to everyone! We provide affordable custom printing. Everything from your posters to sticker slaps ( as low as $5 for 100 3" x 3" pack). We offer a variety of sticker mediums from matte, thermal, glossy,and vinyl + more. Not only do we offer such amazing products we also help if your stuck coming up with an idea. I will work my hardes to help bring your vision to life!</p>
+        </div>
+
+        <div class="tab-panel" id="tab-2">
+<p>Coming soon</p>        </div>
+
+        <div class="tab-panel" id="tab-3">
+<p> snur0000@email.cpcc.edu <br> 666.666.6666</p>        </div>
+
+      </div><!-- .tabs -->
+
+    </section><!-- .page -->
+
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script>
+	$('.tab-list').each(function(){                   // Find lists of tabs
+  var $this = $(this);                            // Store this list
+  var $tab = $this.find('li.active');             // Get the active list item
+  var $link = $tab.find('a');                     // Get link from active tab
+  var $panel = $($link.attr('href'));             // Get active panel
+
+  $this.on('click', '.tab-control', function(e) { // When click on a tab
+    e.preventDefault();                           // Prevent link behavior
+    var $link = $(this),                          // Store the current link
+        id = this.hash;                           // Get href of clicked tab 
+
+    if (id && !$link.is('.active')) {             // If not currently active
+      $panel.removeClass('active');               // Make panel inactive
+      $tab.removeClass('active');                 // Make tab inactive
+
+      $panel = $(id).addClass('active');          // Make new panel active
+      $tab = $link.parent().addClass('active');   // Make new tab active 
+    }
+  });
+});
+</script>
+</div>
+<footer>
+<a href="http://validator.w3.org/check?uri=referer"> <img src ="../images/valid_html5/valid_html5.gif" alt = "html5"></a> 
+<a href="http://jigsaw.w3.org/css-validator/check/referer"> <img src ="../images/valid_html5/vcss-blue.gif" alt= "css"></a>
+</footer>
+
+
+  </body>
+</html>

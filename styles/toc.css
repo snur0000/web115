@@ -1,0 +1,69 @@
+* {
+    box-sizing: border-box;
+    
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+    
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+	height: 400px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+
+    content: "";
+    display: table;
+    clear: both;
+}
+
+body{ 
+margin:50px;
+background-color:#2a2a2a;
+color:#ff4d01;
+font-family:'Open Sans';
+}
+
+hr{
+height:5px;
+border:none;
+background-color:lime;
+}
+
+h1{
+color:lime;
+font-family:'Shadows Into Light';
+margin:0px;
+padding:0px;
+font-size:60px;
+}
+
+h2{
+font-family:'Shadows Into Light';
+margin:0px;
+font-style:italic;
+}
+
+#navlinks{
+color:lime;
+font-weight:bold;
+margin-top:0px;
+}
+
+footer{
+text-align:center;
+margin:10px;
+}
+a{
+color:#ff4d01;
+text-decoration:none;
+}
+a:hover {
+    color: lime;
+}
+ul {
+  list-style-type: none;
+}

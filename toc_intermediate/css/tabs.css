@@ -1,0 +1,85 @@
+/********** TABS **********/
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:800italic);
+@import url(https://fonts.googleapis.com/css?family=Shadows+Into+Light);
+body {
+	
+	
+	 font-family: "Open Sans", Courier, monospace;
+	color: #ff4d01;
+    background-image: url("../../images/background-image.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin: 0;
+    padding: 0;}
+
+
+
+.wholepage, header{
+	background-color:#2a2a2a;
+	}
+	
+h1, h2{
+	text-align:center;
+	font-family:'Shadows Into Light', Arial;
+}
+
+h1{
+	font-size:50px;
+	color:lime;
+}
+
+
+	
+	footer{
+		
+		text-align:center;
+	}
+
+
+.tab-list {
+  margin: 0;
+  padding: 0;}
+
+.tab-list li {
+  display: inline-block;
+  list-style-type: none;
+  background-color: orange;
+  border-bottom: 3px solid #858585;
+  font-family: 'Open Sans', serif;
+  text-transform: uppercase;
+	  text-decoration:none;
+	  text-decoration:none;
+  letter-spacing: 0.2em;}
+
+.tab-list li a {
+  color: #f2f2f2;
+  display: block;
+  padding: 3px 10px 3px 10px;}
+
+
+/********** HOVER STATES **********/
+.tab-list li.active, .tab-list li.hover {
+  background-color: yellow;
+  border-bottom: 3px solid #e5e5e5;
+}
+
+.tab-list li.active a, .tab-list li a:hover {
+  color: #666;
+  background-color: #e5e5e5;}
+
+
+/********** PANELS **********/
+.tab-panel {
+  display: none;
+  background-color: #e5e5e5;
+  color: #666;
+  min-height: 150px;
+  overflow: auto;}
+
+.tab-panel.active {
+  display: block;}
+
+.tab-panel p {
+  margin: 20px;}

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link href="styles/brand.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	
+	<meta charset="UTF-8">
+<title> Fizz Buzz Bang Whatever - Sabby's Custom Ink</title>
+
+
+</head>
+
+<body>
+<div class="column" style="background-color:#505050;" >
+
+<div id = "logo">
+<h1>Sabby's Custom Ink</h1>
+<br>
+<h2>you think it, we print it</h2>
+
+<br>
+	<div id = "navlinks">
+	<a href="">home</a>&diams;
+ 	<a href="">about</a>&diams;
+ 	<a href="">services</a>&diams;
+ 	<a href="">portfolio</a>&diams; 
+ 	<a href="">gallery</a>&diams; 
+ 	<a href="">contact</a>
+	</div>
+	<h3>Fizz Buzz Whatever </h3>
+</div>
+
+<br>
+<div id = "wholepage">
+<h3 id = "greeting" > Welcome to Sabby's Custom Ink! </h3>
+
+<form>
+
+
+<p>
+  First name:<br>
+  <input  type="text" id="first_name" value="Sabrina" required>
+  <br>
+  Middle name:<br>
+  <input  type="text" id="middle_name" value = "Taisir" required>
+  <br>
+  Last name:<br>
+  <input  type="text" id="last_name" value = "Nur" required>
+  </p>
+  
+  <br>
+  <p>
+   End Number:<br>
+  <input  type="text" id="end_number" value = "105" required>
+</p>
+  <br>
+
+
+<p>
+	First Divisor:<br>
+  <input  type="number" id="firstDivisor" value = "3" required>
+  <br>
+  Second Divisor:<br>
+  <input  type="text" id="secondDivisor" value = "5" required>
+  <br>
+   Third Divisor:<br>
+  <input  type="text" id="thirdDivisor" value = "7" required>
+  </p>
+
+ <br>
+ 
+ 
+ <p>
+   First word:<br>
+  <input  type="text" id="firstWord" value = "fizz" required>
+  <br>
+  Second word:<br>
+  <input  type="text" id="secondWord" value = "Buzz" required>
+  <br>
+   Third word:<br>
+  <input  type="text" id="thirdWord" value = "bang" required>
+  <br><br>
+<input id= "submit" type="button" value="submit" onclick = "myfunction();">
+<p>
+
+</form>
+
+
+
+<p id = "list">
+</p>
+
+<script>
+
+
+	
+//after submit
+ function myfunction() {
+ 
+ //variables
+ var text = "";
+	var end_number = document.getElementById("end_number").value;
+	var firstWord = document.getElementById("firstWord").value;
+	var secondWord = document.getElementById("secondWord").value;
+	var thirdWord = document.getElementById("thirdWord").value;
+    var firstDivisor = document.getElementById("firstDivisor").value;
+	var secondDivisor = document.getElementById("secondDivisor").value;
+	var thirdDivisor = document.getElementById("thirdDivisor").value;
+
+
+
+//changes greeting
+	document.getElementById("greeting").innerHTML = document.getElementById("first_name").value + " " +
+	document.getElementById("middle_name").value + " " +
+	document.getElementById("last_name").value +
+	 ", Welcome to Sabby's Custom Ink!!!!";
+	
+
+  
+	for (var i = 1; i <= end_number; i++) {
+  
+    //3,5,7
+    if (i % firstDivisor === 0 && i % secondDivisor === 0 && i % thirdDivisor === 0) {
+
+    document.getElementById("list").innerHTML = text += i + ". " + firstWord + secondWord + thirdWord + "<br>";
+    }
+    
+    //3,5
+    else if(i % firstDivisor === 0 && i % secondDivisor === 0) {
+    document.getElementById("list").innerHTML = text += i + ". " + firstWord + secondWord + "<br>";
+    }
+    
+    //3,7
+    else if(i % firstDivisor === 0 && i % thirdDivisor === 0) {
+    document.getElementById("list").innerHTML = text += i + ". " + firstWord + thirdWord + "<br>"; 
+    }
+    
+    //5,7
+    else if(i % secondDivisor === 0 && i % thirdDivisor === 0) {
+    document.getElementById("list").innerHTML = text += i + ". " + secondWord + thirdWord + "<br>"; 
+    }
+    
+    //3
+    else if (i % firstDivisor === 0) {
+    document.getElementById("list").innerHTML = text += i + ". " + firstWord + "<br>";
+    }
+    
+    //5
+    else if (i % secondDivisor === 0) {
+    document.getElementById("list").innerHTML = text += i + ". " + secondWord + "<br>";
+    }
+    
+    //7
+     else if (i % thirdDivisor === 0) {
+    document.getElementById("list").innerHTML = text += i + ". " + thirdWord + "<br>";
+    }
+    
+    //other
+    else {
+     document.getElementById("list").innerHTML = text += i + ". <br>"; 
+     }
+     
+     	
+	}
+}
+ 
+
+
+</script>
+
+
+</div>
+<hr>
+<footer>
+<a href="http://validator.w3.org/check?uri=referer"> <img src ="images/valid_html5/valid_html5.gif" alt = "html5"></a> 
+<a href="http://jigsaw.w3.org/css-validator/check/referer"> <img src ="images/valid_html5/vcss-blue.gif" alt= "css"></a>
+</footer>
+</div>
+</body>
+</html>

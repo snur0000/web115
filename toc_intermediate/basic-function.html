@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang ="en">
+  <head>
+  <meta charset="UTF-8">
+ <link rel="stylesheet" type="text/css" href="css/c03.css">
+    <title>Basic Function</title>
+  
+  </head>
+  <body>
+    <img src = "http://students.cpcc.edu/~snur0000/web115/images/sabbycustomink_logo.png" alt = "logo"><br>
+    <div id="message">Welcome to our site!</div>
+		
+
+    <script>
+	// Create a variable called msg to hold a new message
+var msg = 'Sign up to receive a free sticker!';
+
+// Create a function to update the content of the element whose id attribute has a value of message
+function updateMessage() {
+  var el = document.getElementById('message');
+  el.textContent = msg;
+}
+
+// Call the function
+updateMessage();
+</script>
+<footer>
+<a href="http://validator.w3.org/check?uri=referer"> <img src ="../images/valid_html5/valid_html5.gif" alt = "html5"></a> 
+<a href="http://jigsaw.w3.org/css-validator/check/referer"> <img src ="../images/valid_html5/vcss-blue.gif" alt= "css"></a>
+</footer>
+  </body>
+</html>

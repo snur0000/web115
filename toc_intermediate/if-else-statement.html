@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+  <meta charset="UTF-8">
+
+  <link rel="stylesheet" type="text/css" href="css/c04.css">
+    <title>Chapter 4: Decisions &amp; Loops - If... Else Statement</title>
+  </head>
+  <body>
+  	<section id="page1">
+	  	<h1>Sabby's Custom Ink</h1>
+		<h2>you think it, we print it </h2>
+  
+	  	<section id="answer"></section>
+	  </section>
+    <script> var pass = 50;      // Pass mark
+var score = 75;    // Current score
+var msg;            // Message
+
+// Select message to write based on score
+if (score > pass) {
+  msg = 'Congratulations, you passed!' ;
+} else {
+  msg = 'Have another go!';
+}
+
+var el = document.getElementById('answer');
+el.textContent = msg;
+</script>
+<footer>
+<a href="http://validator.w3.org/check?uri=referer"> <img src ="../images/valid_html5/valid_html5.gif" alt = "html5"></a> 
+<a href="http://jigsaw.w3.org/css-validator/check/referer"> <img src ="../images/valid_html5/vcss-blue.gif" alt= "css"></a>
+</footer>
+  </body>
+</html>

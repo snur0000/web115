@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+      <meta charset="UTF-8">
+    <title>JavaScript &amp; jQuery - Chapter 8: Ajax &amp; JSON - .get()</title>
+    <link rel="stylesheet" href="css/c08.css" />
+  </head>
+  <body>
+
+    <header>
+	<h1>Sabby's Custom Ink</h1>
+	<h2>&diams; you think it, we print it &diams;</h2>
+	</header>
+    <section id="content">
+      <h2>Vote for a custom printed t-shirt.</h2>
+	  <footer>
+	  <a href="http://validator.w3.org/check?uri=referer"> <img src ="../images/valid_html5/valid_html5.gif" alt = "html5"></a> 
+<a href="http://jigsaw.w3.org/css-validator/check/referer"> <img src ="../images/valid_html5/vcss-blue.gif" alt= "css"></a>
+</footer>
+<br><br>
+      <p id="selector"></p>
+	  
+    </section>
+
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script>
+	// NOTE: This example will only work if you run it on a web server (it will not work locally)
+
+// This first variable creates the t-shirt options, the HTML for it is shown on p395
+var vote = '<div id="vote"><div class="third"><a href="http://example.org?tshirt=gray"><img src="img/t-gray.png" id="gray" alt="gray" /></a></div><div class="third"><a href="http://example.org?tshirt=yellow" id="yellow"><img src="img/t-yellow.png" id="yellow" alt="yellow" /></a></div><div class="third"><a href="http://example.org?tshirt=green"><img src="img/t-green.png" id="green" alt="green" /></a></div></div>';
+$('#selector').append(vote);
+
+// This adds ratings to the side bar
+$('#selector a').on('click', function(e) {
+  e.preventDefault();
+  var queryString = 'vote=' + $(e.target).attr('id');
+  $.get('votes.php', queryString, function(data) {
+    $('#selector').html(data);
+  });
+});
+	</script>
+	<br>
+
+
+	
+	 
+  </body>
+</html>

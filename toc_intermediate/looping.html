@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <meta charset="UTF-8">
+    <title>JavaScript &amp; jQuery - Chapter 7: Introducing jQuery - Looping</title>
+    <link rel="stylesheet" href="css/c07.css" />
+  </head>
+  <body>
+    <div id="page">
+      <h1 id="header">Sabby's Custom Ink</h1>
+	  <h2>&diams;you think it, we print it&diams;</h2> <hr>
+      <h2 style = "color:lime;">Screen Printing Supplies</h2>
+      <ul>
+        <li id="one" class="hot"> Emulsion</li>
+        <li id="two" class="hot">Screen Printing Inks</li>
+        <li id="three" class="hot">Squeegee</li>
+        <li id="four">Dark Room</li>
+      </ul>
+    </div>
+    <script src="js/jquery-1.11.0.js"></script>
+    <script>
+	$('li em').addClass('seasonal');
+$('li.hot').addClass('favorite');
+	</script>
+  <footer>
+<a href="http://validator.w3.org/check?uri=referer"> <img src ="../images/valid_html5/valid_html5.gif" alt = "html5"></a> 
+<a href="http://jigsaw.w3.org/css-validator/check/referer"> <img src ="../images/valid_html5/vcss-blue.gif" alt= "css"></a>
+</footer>
+ </body>
+</html>

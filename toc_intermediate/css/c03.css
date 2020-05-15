@@ -1,0 +1,23 @@
+  @import url(http://fonts.googleapis.com/css?family=Open+Sans:800italic);
+@import url(https://fonts.googleapis.com/css?family=Shadows+Into+Light);
+
+  body {
+background-image: url("../../images/background-image.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin: 0px;
+    padding: 0px;
+font-family:'Shadows Into Light';
+
+}
+
+  #message {
+float: left;
+  clear: left;
+  background-color: #2a2a2a;
+	color:#ff4d01;
+  width:260px;
+  padding: 18px 30px;
+  text-align: center;}

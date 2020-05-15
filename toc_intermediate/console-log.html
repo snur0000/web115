@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang ="en">
+  <head>
+	<meta charset="UTF-8">
+    <title>JavaScript &amp; jQuery - Chapter 10: Error Handling &amp; Debugging - console.log()</title>
+    <style>
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:800italic);
+@import url(https://fonts.googleapis.com/css?family=Shadows+Into+Light);
+body { 
+    font-family: "Open Sans", Courier, monospace;
+	color: #ff4d01;
+    background-image: url("../images/background-image.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+	text-align:center;}
+	
+	
+	h1,h2 {
+	font-family: 'Shadows Into Light', Arial}
+	
+	h1{
+	color: lime;
+	font-size:50px;}
+	
+	#wholepage{
+	background-color:#2a2a2a;
+	}
+	
+	</style>
+  </head>
+  <body>
+  <div id= "wholepage">
+ 
+    <form action="#" id="calculator">
+	
+	
+<h1 id="header">Sabby's Custom Ink</h1>
+	  <h2>&diams; you think it, we print it &diams;</h2>
+      <h2>Find the area of a square</h2>
+      <input type="text" name="width" id="width" placeholder="width" />
+      <input type="text" name="height" id="height" placeholder="height" />
+      <input type="submit" value="Calculate area" id="submit" />
+    </form>
+	
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script>
+	console.log('And we\'re off...');               // Indicates script is running
+var $form, width, height, area;
+$form = $('#calculator');
+
+$('form input[type="text"]').on('blur', function() { // When input loses focus
+  console.log('You entered ', this.value );          // Write value to console
+});
+
+$('#calculator').on('submit', function(e) {     // When the user clicks submit
+  e.preventDefault();                           // Prevent the form submitting
+  console.log('Clicked submit...');             // Indicate button was clicked
+
+  width = $('#width').val();
+  console.log('Width ' + width);                // Write width to console
+
+  height = $('#height').val();
+  console.log('Height ', height);               // Write height to console
+
+  area = width * height;
+  console.log(area);                            // Write area to console
+
+  $form.append('<p>' + area + '</p>')
+});
+</script>
+<br> <br>
+  <footer>
+<a href="http://validator.w3.org/check?uri=referer"> <img src ="../images/valid_html5/valid_html5.gif" alt = "html5"></a> 
+<a href="http://jigsaw.w3.org/css-validator/check/referer"> <img src ="../images/valid_html5/vcss-blue.gif" alt= "css"></a>
+</footer>
+<br><br>
+</div>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+/* CSS for Index Page */
+
+body {
+	
+  font-family: 'Open Sans', Arial, sans-serif;
+  color: lime;
+  margin: 0px auto;
+  padding: 0px;
+  background-color:#2a2a2a;
+  text-align: center;
+  }
+  
+  #header{
+  font-family:'Shadows Into Light';
+  font-size:35px;
+  }
+  
+  
+  hr{
+height:5px;
+border:none;
+background-color:lime;
+}
+
+
+
+h3 {
+    color: #ff4d01;}
+
+a {
+  color: #ff4d01;
+  text-decoration: none;}
+
+a:hover {
+  color: lime;}
+
+table {
+
+  padding: 0px;
+  margin-left:auto; 
+  margin-right:auto;}
+
+td {
+  border-radius: 3px;
+  background-color: #5d5d5d;
+  padding: 8px;
+  margin-bottom: 3px;
+  text-align: left;}
+
+.blank {
+  background: #f7f7f7;}

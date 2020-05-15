@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+<head>
+<meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="css/c01.css">
+    <title> &diams; Sabby's Custom Ink &diams;</title>
+
+  </head>
+  <body>
+  
+    <h1>Sabby's Custom Ink</h1>
+   <script>
+var today = new Date();
+var hourNow = today.getHours();
+var greeting;
+
+if (hourNow > 18) {
+    greeting = 'Good evening!';
+} else if (hourNow > 12) {
+    greeting = 'Good afternoon!';
+} else if (hourNow > 0) {
+    greeting = 'Good morning!';
+} else {
+    greeting = 'Welcome!';
+}
+
+document.write('<h3>' + greeting + '</h3>'); 
+</script>
+    <p>For all orders and inquiries please call <em>666-666-6666</em></p>
+	
+	<footer>
+<a href="http://validator.w3.org/check?uri=referer"> <img src ="../images/valid_html5/valid_html5.gif" alt = "html5"></a> 
+<a href="http://jigsaw.w3.org/css-validator/check/referer"> <img src ="../images/valid_html5/vcss-blue.gif" alt= "css"></a>
+</footer>
+	
+	
+  </body>
+</html>
